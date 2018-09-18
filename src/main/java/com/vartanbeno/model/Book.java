@@ -1,5 +1,12 @@
 package com.vartanbeno.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "book")
+@XmlType(propOrder = {
+        "id", "title", "author", "publisher", "publishingYear", "genre", "numberOfPages", "description", "url", "imageUrl", "available"
+})
 public class Book {
 
     private int id;
@@ -12,7 +19,7 @@ public class Book {
     private String description;
     private String url;
     private String imageUrl;
-    private boolean isAvailable;
+    private boolean available;
 
     public int getId() {
         return id;
@@ -95,10 +102,10 @@ public class Book {
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return available;
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
+        this.available = available;
     }
 }

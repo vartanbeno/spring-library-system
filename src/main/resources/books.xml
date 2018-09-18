@@ -10,11 +10,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>1984</title>
         <author>George Orwell</author>
         <publisher>Hughton Mifflin Harcourt</publisher>
-        <publishing-year>2013</publishing-year>
+        <publishingYear>2013</publishingYear>
         <genre>dystopian</genre>
-        <number-of-pages>237</number-of-pages>
+        <numberOfPages>237</numberOfPages>
         <description>Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its futuristic purgatory becomes more real. Published in 1949, the book offers political satirist George Orwell's nightmare vision of a totalitarian, bureaucratic world and one poor stiff's attempt to find individuality. The brilliance of the novel is Orwell's prescience of modern life--the ubiquity of television, the distortion of the language--and his ability to construct such a thorough version of hell. Required reading for students since it was published, it ranks among the most terrifying novels ever written.</description>
         <url>https://www.goodreads.com/book/show/40961427-1984</url>
+        <imageUrl>https://images.gr-assets.com/books/1532714506l/40961427.jpg</imageUrl>
+        <available>true</available>
     </book>
 
     <book>
@@ -22,11 +24,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>The Catcher in the Rye</title>
         <author>J.D. Salinger</author>
         <publisher>Back Bay Books</publisher>
-        <publishing-year>2001</publishing-year>
+        <publishingYear>2001</publishingYear>
         <genre>realistic fiction</genre>
-        <number-of-pages>277</number-of-pages>
-        <description>The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden&#x27;s voice is the most eloquent of all. Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure. However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself. The pleasure he gives away, or sets aside, with all his heart. It is there for the reader who can handle it to keep.</description>
+        <numberOfPages>277</numberOfPages>
+        <description>The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all. Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure. However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself. The pleasure he gives away, or sets aside, with all his heart. It is there for the reader who can handle it to keep.</description>
         <url>https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye</url>
+        <imageUrl>https://images.gr-assets.com/books/1398034300l/5107.jpg</imageUrl>
+        <available>false</available>
     </book>
 
     <book>
@@ -34,11 +38,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>Brave New World</title>
         <author>Aldous Huxley</author>
         <publisher>HarperPerennial</publisher>
-        <publishing-year>1998</publishing-year>
+        <publishingYear>1998</publishingYear>
         <genre>dystopian</genre>
-        <number-of-pages>288</number-of-pages>
+        <numberOfPages>288</numberOfPages>
         <description>Brave New World is a dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in a futuristic World State of genetically modified citizens and an intelligence-based social hierarchy, the novel anticipates huge scientific developments in reproductive technology, sleep-learning, psychological manipulation, and classical conditioning that are combined to make a utopian society that goes challenged only by a single outsider.</description>
         <url>https://www.goodreads.com/book/show/5129.Brave_New_World</url>
+        <imageUrl>https://images.gr-assets.com/books/1523061131l/5129.jpg</imageUrl>
+        <available>false</available>
     </book>
 
     <book>
@@ -46,11 +52,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>Twilight</title>
         <author>Stephenie Meyer</author>
         <publisher>Little, Brown and Company</publisher>
-        <publishing-year>2006</publishing-year>
+        <publishingYear>2006</publishingYear>
         <genre>fantasy</genre>
-        <number-of-pages>498</number-of-pages>
+        <numberOfPages>498</numberOfPages>
         <description>In the first book of the Twilight Saga, internationally bestselling author Stephenie Meyer introduces Bella Swan and Edward Cullen, a pair of star-crossed lovers whose forbidden relationship ripens against the backdrop of small-town suspicion and a mysterious coven of vampires. This is a love story with bite.</description>
         <url>https://www.goodreads.com/book/show/41865.Twilight</url>
+        <imageUrl>https://images.gr-assets.com/books/1361039443l/41865.jpg</imageUrl>
+        <available>true</available>
     </book>
 
     <book>
@@ -58,11 +66,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>Charlotte's Web</title>
         <author>E.B. White</author>
         <publisher>HarperCollinsPublishers</publisher>
-        <publishing-year>2001</publishing-year>
+        <publishingYear>2001</publishingYear>
         <genre>children</genre>
-        <number-of-pages>184</number-of-pages>
+        <numberOfPages>184</numberOfPages>
         <description>This beloved book by E. B. White, author of Stuart Little and The Trumpet of the Swan, is a classic of children's literature that is "just about perfect." This high-quality paperback features vibrant illustrations colorized by Rosemary Wells!</description>
         <url>https://www.goodreads.com/book/show/24178.Charlotte_s_Web</url>
+        <imageUrl>https://images.gr-assets.com/books/1439632243l/24178.jpg</imageUrl>
+        <available>true</available>
     </book>
 
     <book>
@@ -70,11 +80,13 @@ Book genres are taken from https://www.wikipedia.org/
         <title>Life of Pi</title>
         <author>Yann Martel</author>
         <publisher>Seal Books</publisher>
-        <publishing-year>2006</publishing-year>
+        <publishingYear>2006</publishingYear>
         <genre>fiction</genre>
-        <number-of-pages>460</number-of-pages>
+        <numberOfPages>460</numberOfPages>
         <description>Life of Pi is a fantasy adventure novel by Yann Martel published in 2001. The protagonist, Piscine Molitor "Pi" Patel, a Tamil boy from Pondicherry, explores issues of spirituality and practicality from an early age. He survives 227 days after a shipwreck while stranded on a boat in the Pacific Ocean with a Bengal tiger named Richard Parker.</description>
         <url>https://www.goodreads.com/book/show/4214.Life_of_Pi</url>
+        <imageUrl>https://images.gr-assets.com/books/1320562005l/4214.jpg</imageUrl>
+        <available>false</available>
     </book>
 
 </books>

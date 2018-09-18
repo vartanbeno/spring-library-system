@@ -1,5 +1,12 @@
 package com.vartanbeno.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "user")
+@XmlType(propOrder = {
+        "id", "firstName", "lastName", "username", "password"
+})
 public class User {
 
     private int id;
