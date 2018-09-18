@@ -1,0 +1,27 @@
+<users>
+
+    <user>
+        <id>1</id>
+        <first-name>Vartan</first-name>
+        <last-name>Benohanian</last-name>
+        <username>vartanbeno</username>
+        <password>test123</password>
+    </user>
+
+    <user>
+        <id>2</id>
+        <first-name>Test</first-name>
+        <last-name>Tester</last-name>
+        <username>test123</username>
+        <password>test123</password>
+    </user>
+
+    <user>
+        <id>3</id>
+        <first-name>Hello</first-name>
+        <last-name>World</last-name>
+        <username>hello</username>
+        <password>world</password>
+    </user>
+
+</users>
