@@ -19,16 +19,16 @@ public class LoginController {
     }
 
     @PostMapping("/authenticate")
-    public ModelAndView authenticate(
+    public String authenticate(
             @ModelAttribute("user") User user,
             Model model
     ) {
         User theUser = UserOperations.getUser(user.getUsername(), user.getPassword());
         if (theUser == null) {
-            return new ModelAndView("redirect:/login");
+            return "redirect:/login";
         }
         else {
-            return new ModelAndView("redirect:/");
+            return "redirect:/";
         }
     }
 

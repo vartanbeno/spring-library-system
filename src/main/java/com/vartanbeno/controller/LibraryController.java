@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/")
 public class LibraryController {
+
+    private final Logger logger = Logger.getLogger(getClass().getName());
 
     private List<Book> books;
     private static final String[] searchByOptions = { "title", "author", "publisher", "genre", "description" };
@@ -20,15 +24,7 @@ public class LibraryController {
     @GetMapping("/")
     public String showSearchPage(Model model) {
         model.addAttribute("searchByOptions", searchByOptions);
-        return "search-page";
-    }
-
-    @GetMapping("/library")
-    public String showLibrary(Model model) {
-        books = BookOperations.getBooks();
-        model.addAttribute("books", books);
-
-        return "library";
+        return "search-form";
     }
 
     @GetMapping("/search")
@@ -37,7 +33,18 @@ public class LibraryController {
             @RequestParam("q") String query,
             Model model
     ) {
+        boolean validOption = Arrays.asList(searchByOptions).stream().anyMatch(option -> option.equalsIgnoreCase(searchBy));
+        if (!validOption) {
+            logger.warning("Make sure your searchBy variable is equal to one of the options in the searchByOptions array (case insensitive).");
+            return "redirect:/";
+        }
 
+        if (query.trim() == "") {
+            logger.warning("You need to include something in your search query.");
+            return "redirect:/";
+        }
+
+        // Would've used a switch statement but it was giving me an error.
         if (searchBy.equalsIgnoreCase(searchByOptions[0])) {
             books = BookOperations.getBooksByTitle(query);
         }
@@ -57,7 +64,7 @@ public class LibraryController {
         model.addAttribute("books", books);
         model.addAttribute("searchingBy", searchBy.toLowerCase());
 
-        return "search";
+        return "search-results";
     }
 
 }

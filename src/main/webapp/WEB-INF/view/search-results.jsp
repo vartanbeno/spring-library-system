@@ -3,17 +3,19 @@
   Created by IntelliJ IDEA.
   User: vartanbeno
   Date: 2018-09-19
-  Time: 12:17 AM
+  Time: 5:56 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Library</title>
+    <title>Search Results</title>
+    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
-    <core:forEach var="book" items="${books}">
-        <p>${book.title} by ${book.author}</p>
-    </core:forEach>
+<core:forEach var="book" items="${books}">
+    <p>${book.title} by ${book.author}</p>
+    <p>Id of book is ${book.id}!!</p>
+</core:forEach>
 </body>
 </html>

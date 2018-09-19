@@ -1,6 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="semantic-ui-cdn.jsp" />
 <%--
   Created by IntelliJ IDEA.
   User: vartanbeno
@@ -12,6 +11,7 @@
 <html>
 <head>
     <title>Sign In</title>
+    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
 <div class="ui container">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <button class="ui black button" type="submit">Login</button>
+                <button type="submit" class="fluid ui blue button">Login</button>
 
             </form:form>
         </div>

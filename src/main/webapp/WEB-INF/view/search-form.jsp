@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="semantic-ui-cdn.jsp" />
 <%--
   Created by IntelliJ IDEA.
   User: vartanbeno
@@ -11,8 +10,10 @@
 <html>
 <head>
     <title>Search</title>
+    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
+<div class="ui container">
     <div class="main">
         <div class="column">
             <h3>Conduct a search</h3>
@@ -20,7 +21,7 @@
 
                 <div class="field">
                     <label for="q">Search for...</label>
-                    <input type="text" name="q" id="q" placeholder="Enter keyword(s)" />
+                    <input type="text" name="q" id="q" placeholder="Enter keyword(s)" required />
                 </div>
 
                 <div class="field">
@@ -29,7 +30,7 @@
                         <c:forEach items="${searchByOptions}" var="option">
                             <div class="field">
                                 <div class="ui radio checkbox">
-                                    <input type="radio" name="by" id="${option}" value="${option}" />
+                                    <input type="radio" name="by" id="${option}" value="${option}" required />
                                     <label style="cursor: pointer;" for="${option}">${option}</label>
                                 </div>
                             </div>
@@ -37,8 +38,11 @@
                     </div>
                 </div>
 
+                <button type="submit" class="fluid ui blue button">Search</button>
+
             </form>
         </div>
     </div>
+</div>
 </body>
 </html>
