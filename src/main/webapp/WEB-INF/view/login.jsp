@@ -1,5 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:include page="semantic-ui-cdn.jsp" />
 <%--
   Created by IntelliJ IDEA.
   User: vartanbeno
@@ -11,17 +12,6 @@
 <html>
 <head>
     <title>Sign In</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
-    <style>
-        .main {
-            display: flex;
-            justify-content: center;
-        }
-
-        .column {
-            width: 50%;
-        }
-    </style>
 </head>
 <body>
 <div class="ui container">

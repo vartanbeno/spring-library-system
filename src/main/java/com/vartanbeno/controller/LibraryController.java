@@ -17,6 +17,12 @@ public class LibraryController {
     private List<Book> books;
     private static final String[] searchByOptions = { "title", "author", "publisher", "genre", "description" };
 
+    @GetMapping("/")
+    public String showSearchPage(Model model) {
+        model.addAttribute("searchByOptions", searchByOptions);
+        return "search-page";
+    }
+
     @GetMapping("/library")
     public String showLibrary(Model model) {
         books = BookOperations.getBooks();
