@@ -22,19 +22,26 @@ public class UserOperations {
     }
 
     public static List<User> getUsers() {
-        List<User> userList = null;
+        List<User> userList = new ArrayList<>();
         try {
             userList = getListOfUsers().getUserList();
         }
         catch (Exception e) {
             e.printStackTrace();
-            userList = new ArrayList<>();
         }
         return userList;
     }
 
     public static User getUser(String username, String password) {
-        return getUsers().stream().filter(user -> user.getUsername().equals(username) && user.getPassword().equals(password)).collect(Collectors.toList()).get(0);
+        User user;
+        try {
+            user = getUsers().stream().filter(theUser -> theUser.getUsername().equals(username) && theUser.getPassword().equals(password)).collect(Collectors.toList()).get(0);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.out.println("Incorrect username and/or password.");
+            user = null;
+        }
+        return user;
     }
 
     @XmlRootElement(name = "users")

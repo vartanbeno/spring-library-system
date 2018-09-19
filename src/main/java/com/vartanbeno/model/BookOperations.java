@@ -22,19 +22,26 @@ public class BookOperations {
     }
 
     public static List<Book> getBooks() {
-        List<Book> bookList = null;
+        List<Book> bookList = new ArrayList<>();
         try {
             bookList = getListOfBooks().getBookList();
         }
         catch (Exception e) {
             e.printStackTrace();
-            bookList = new ArrayList<>();
         }
         return bookList;
     }
 
     public static Book getBookById(int id) {
-        return getBooks().stream().filter(book -> book.getId() == id).collect(Collectors.toList()).get(0);
+        Book book;
+        try {
+            book = getBooks().stream().filter(theBook -> theBook.getId() == id).collect(Collectors.toList()).get(0);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.out.println("Book with id " + id + " does not exist.");
+            book = null;
+        }
+        return book;
     }
 
     public static List<Book> getBooksByTitle(String title) {
@@ -71,9 +78,4 @@ public class BookOperations {
             this.books = books;
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(getBooksByTitle("1984").get(0).getAuthor());
-    }
-
 }
