@@ -15,16 +15,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login(Model model, HttpServletRequest request) {
-
-        boolean loggedIn;
-        try {
-            loggedIn = (boolean) request.getSession().getAttribute("loggedIn");
-        }
-        catch (NullPointerException e) {
-            loggedIn = false;
-        }
-
-        if (loggedIn) {
+        if (loggedIn(request)) {
             return "redirect:/";
         }
         else {
@@ -47,6 +38,17 @@ public class LoginController {
             request.getSession().setAttribute("loggedIn", true);
             return "redirect:/";
         }
+    }
+
+    public static boolean loggedIn(HttpServletRequest request) {
+        boolean loggedIn;
+        try {
+            loggedIn = (boolean) request.getSession().getAttribute("loggedIn");
+        }
+        catch (NullPointerException e) {
+            loggedIn = false;
+        }
+        return loggedIn;
     }
 
 }

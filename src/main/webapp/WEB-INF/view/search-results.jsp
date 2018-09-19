@@ -13,6 +13,7 @@
     <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
+<jsp:include page="header.jsp" />
 <core:forEach var="book" items="${books}">
     <p>${book.title} by ${book.author}</p>
     <p>Id of book is ${book.id}!!</p>

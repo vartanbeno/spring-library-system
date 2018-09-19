@@ -16,4 +16,15 @@
     .column {
         width: 50%;
     }
+
+    #header {
+        padding: 3rem 0;
+        background-color: black;
+        margin-bottom: 2rem;
+    }
+
+    #header h1 {
+        color: white;
+        margin-bottom: 0;
+    }
 </style>

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
@@ -22,24 +23,35 @@ public class LibraryController {
     private static final String[] searchByOptions = { "title", "author", "publisher", "genre", "description" };
 
     @GetMapping("/")
-    public String showSearchPage(Model model) {
-        model.addAttribute("searchByOptions", searchByOptions);
-        return "search-form";
+    public String showSearchPage(Model model, HttpServletRequest request) {
+        if (LoginController.loggedIn(request)) {
+            model.addAttribute("searchByOptions", searchByOptions);
+            return "search-form";
+        }
+        else {
+            return "redirect:/login";
+        }
     }
 
     @GetMapping("/search")
     public String searchBooks(
             @RequestParam("by") String searchBy,
             @RequestParam("q") String query,
-            Model model
+            Model model,
+            HttpServletRequest request
     ) {
+        if (!LoginController.loggedIn(request)) {
+            return "redirect:/login";
+        }
+
         boolean validOption = Arrays.asList(searchByOptions).stream().anyMatch(option -> option.equalsIgnoreCase(searchBy));
         if (!validOption) {
             logger.warning("Make sure your searchBy variable is equal to one of the options in the searchByOptions array (case insensitive).");
             return "redirect:/";
         }
 
-        if (query.trim() == "") {
+        query = query.trim();
+        if (query == "") {
             logger.warning("You need to include something in your search query.");
             return "redirect:/";
         }

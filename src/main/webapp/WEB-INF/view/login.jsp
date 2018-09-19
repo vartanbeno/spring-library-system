@@ -14,6 +14,7 @@
     <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
+<jsp:include page="header.jsp" />
 <div class="ui container">
     <div class="main">
         <div class="column">
