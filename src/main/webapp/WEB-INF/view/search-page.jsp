@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="semantic-ui-cdn.jsp" />
 <%--
   Created by IntelliJ IDEA.
@@ -15,17 +15,29 @@
 <body>
     <div class="main">
         <div class="column">
-            <h3>Search</h3>
-            <form:form cssClass="ui form" action="search" method="get">
+            <h3>Conduct a search</h3>
+            <form class="ui form" action="search" method="get">
+
                 <div class="field">
                     <label for="q">Search for...</label>
-                    <form:input path="q" placeholder="Enter keyword(s)" />
+                    <input type="text" name="q" id="q" placeholder="Enter keyword(s)" />
                 </div>
+
                 <div class="field">
-                    <label for="by">Search by...</label>
-                    <form:checkboxes path="by" items="${searchByOptions}" />
+                    <label>Search by...</label>
+                    <div class="inline fields">
+                        <c:forEach items="${searchByOptions}" var="option">
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="by" id="${option}" value="${option}" />
+                                    <label style="cursor: pointer;" for="${option}">${option}</label>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </div>
                 </div>
-            </form:form>
+
+            </form>
         </div>
     </div>
 </body>
