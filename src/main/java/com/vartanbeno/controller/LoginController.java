@@ -7,27 +7,44 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class LoginController {
 
     @GetMapping("/login")
-    public String login(Model model) {
-        model.addAttribute("user", new User());
-        return "login";
+    public String login(Model model, HttpServletRequest request) {
+
+        boolean loggedIn;
+        try {
+            loggedIn = (boolean) request.getSession().getAttribute("loggedIn");
+        }
+        catch (NullPointerException e) {
+            loggedIn = false;
+        }
+
+        if (loggedIn) {
+            return "redirect:/";
+        }
+        else {
+            model.addAttribute("user", new User());
+            request.getSession().setAttribute("loggedIn", false);
+            return "login";
+        }
     }
 
     @PostMapping("/authenticate")
     public String authenticate(
             @ModelAttribute("user") User user,
-            Model model
+            HttpServletRequest request
     ) {
         User theUser = UserOperations.getUser(user.getUsername(), user.getPassword());
         if (theUser == null) {
             return "redirect:/login";
         }
         else {
+            request.getSession().setAttribute("loggedIn", true);
             return "redirect:/";
         }
     }
