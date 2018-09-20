@@ -31,6 +31,16 @@
                     <div class="description">
                         <p><span class="book info">Publisher:</span> ${book.publisher}</p>
                         <p><span class="book info">Publishing year:</span> ${book.publishingYear}</p>
+                        <p>
+                            <core:choose>
+                                <core:when test="${book.available}">
+                                    Available <i class="green check icon"></i>
+                                </core:when>
+                                <core:otherwise>
+                                    Unavailable <i class="red x icon"></i>
+                                </core:otherwise>
+                            </core:choose>
+                        </p>
                     </div>
                     <div class="extra">
                         <button class="ui right floated right labeled icon blue button" onclick="window.location.href='/book?id=${book.id}'">

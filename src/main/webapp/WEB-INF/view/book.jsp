@@ -19,12 +19,14 @@
     <h2 class="ui dividing header">
         ${book.title} <span class="grey text">&mdash;</span> ${book.author}
         <div class="sub header">
-            <core:if test="${book.available}">
-                Available <i class="green check icon"></i>
-            </core:if>
-            <core:if test="${!book.available}">
-                Unavailable <i class="red x icon"></i>
-            </core:if>
+            <core:choose>
+                <core:when test="${book.available}">
+                    Available <i class="green check icon"></i>
+                </core:when>
+                <core:otherwise>
+                    Unavailable <i class="red x icon"></i>
+                </core:otherwise>
+            </core:choose>
         </div>
     </h2>
     <div class="book description">
