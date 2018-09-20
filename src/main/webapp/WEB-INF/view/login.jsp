@@ -18,26 +18,32 @@
 <div class="ui container">
     <div class="main">
         <div class="column">
+
+            <core:if test="${param.error != null}">
+                <div class="ui red message">
+                    <p>Incorrect username and/or password.</p>
+                </div>
+            </core:if>
+
+            <core:if test="${param.warning != null}">
+                <div class="ui warning message">
+                    <p>You must log in to proceed.</p>
+                </div>
+            </core:if>
+
+            <core:if test="${param.logout != null}">
+                <div class="ui positive message">
+                    <p>You have successfully logged out.</p>
+                </div>
+            </core:if>
+
             <h3>Sign In</h3>
             <form:form cssClass="ui form" action="${pageContext.request.contextPath}/authenticate" modelAttribute="user" method="post">
-
-                <core:if test="${param.error != null}">
-                    <div class="ui red message">
-                        <div class="header">Something went wrong.</div>
-                        <p>Incorrect username and/or password.</p>
-                    </div>
-                </core:if>
-
-                <core:if test="${param.logout != null}">
-                    <div class="ui positive message">
-                        <p>You have successfully logged out.</p>
-                    </div>
-                </core:if>
 
                 <div class="field">
                     <label for="username">Username</label>
                     <div class="ui left icon input">
-                        <form:input type="text" path="username" placeholder="Username" />
+                        <form:input type="text" path="username" placeholder="Username" required="required" />
                         <i class="user icon"></i>
                     </div>
                 </div>
@@ -45,7 +51,7 @@
                 <div class="field">
                     <label for="password">Password</label>
                     <div class="ui left icon input">
-                        <form:input type="password" path="password" placeholder="Password" />
+                        <form:input type="password" path="password" placeholder="Password" required="required" />
                         <i class="lock icon"></i>
                     </div>
                 </div>

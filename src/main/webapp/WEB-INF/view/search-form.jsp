@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: vartanbeno
@@ -17,6 +18,13 @@
 <div class="ui container">
     <div class="main">
         <div class="column">
+
+            <core:if test="${param.instruction != null}">
+                <div class="ui warning message">
+                    <p>Make sure to include at least one keyword and a searching option in your query.</p>
+                </div>
+            </core:if>
+
             <h3>Conduct a search</h3>
             <form class="ui form" action="search" method="get">
 

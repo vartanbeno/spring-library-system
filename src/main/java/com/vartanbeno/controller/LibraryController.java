@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @Controller
-@RequestMapping("/")
 public class LibraryController {
 
     private final Logger logger = Logger.getLogger(getClass().getName());
@@ -35,25 +34,25 @@ public class LibraryController {
 
     @GetMapping("/search")
     public String searchBooks(
-            @RequestParam("by") String searchBy,
-            @RequestParam("q") String query,
+            @RequestParam(value = "by", required = false) String searchBy,
+            @RequestParam(value = "q", required = false) String query,
             Model model,
             HttpServletRequest request
     ) {
         if (!LoginController.loggedIn(request)) {
-            return "redirect:/login";
+            return "redirect:/login?warning";
         }
 
         boolean validOption = Arrays.asList(searchByOptions).stream().anyMatch(option -> option.equalsIgnoreCase(searchBy));
         if (!validOption) {
             logger.warning("Make sure your searchBy variable is equal to one of the options in the searchByOptions array (case insensitive).");
-            return "redirect:/";
+            return "redirect:/?instruction";
         }
 
         query = query.trim();
         if (query == "") {
             logger.warning("You need to include something in your search query.");
-            return "redirect:/";
+            return "redirect:/?instruction";
         }
 
         // Would've used a switch statement but it was giving me an error.

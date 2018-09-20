@@ -32,7 +32,7 @@ public class LoginController {
     ) {
         User theUser = UserOperations.getUser(user.getUsername(), user.getPassword());
         if (theUser == null) {
-            return "redirect:/login";
+            return "redirect:/login?error";
         }
         else {
             request.getSession().setAttribute("loggedIn", true);
