@@ -9,11 +9,11 @@
 
 <style>
     .ui.container {
-        margin-bottom: 3rem;
+        width: 75%;
     }
 
-    .search.results {
-        width: 75%;
+    .ui.container.body {
+        margin-bottom: 3rem;
     }
 
     .main {

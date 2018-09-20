@@ -7,8 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="header">
-    <h1 class="ui center aligned icon header">
-        <i class="bookmark outline icon"></i>
-        Library System
-    </h1>
+    <div class="ui container">
+        <h1 class="ui center aligned icon header">
+            <i class="bookmark outline icon"></i>
+            Library System
+        </h1>
+
+        <% if ((boolean) request.getSession().getAttribute("loggedIn")) { %>
+            <button class="ui tiny inverted right floated button" onclick="window.location.href='logout'">
+                <i class="power off icon"></i>
+                Logout
+            </button>
+        <% } %>
+    </div>
 </div>

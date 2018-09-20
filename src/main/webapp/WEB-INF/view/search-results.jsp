@@ -14,7 +14,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-<div class="ui container search results">
+<div class="ui container body">
     <div class="ui divided items">
 
         <core:forEach var="book" items="${books}">
