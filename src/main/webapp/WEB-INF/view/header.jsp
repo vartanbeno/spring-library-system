@@ -15,8 +15,7 @@
 
         <% if ((boolean) request.getSession().getAttribute("loggedIn")) { %>
             <button class="ui tiny inverted right floated button" onclick="window.location.href='logout'">
-                <i class="power off icon"></i>
-                Logout
+                <i class="power off icon"></i>Logout
             </button>
         <% } %>
     </div>

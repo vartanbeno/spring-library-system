@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
 
 @Controller
@@ -76,6 +78,38 @@ public class LibraryController {
         model.addAttribute("searchingBy", searchBy.toLowerCase());
 
         return "search-results";
+    }
+
+    /*
+    Made it so that if the id parameter isn't defined,
+    or is just not in the 'database', the user will be
+    show a random book from the collection.
+     */
+    @GetMapping("/book")
+    public String getBook(
+            @RequestParam(value = "id", required = false) String bookId,
+            Model model,
+            HttpServletRequest request
+    ) {
+        if (!LoginController.loggedIn(request)) {
+            return "redirect:/login?warning";
+        }
+
+        int id;
+        List<Book> books = BookOperations.getBooks();
+
+        try {
+            id = Integer.parseInt(bookId);
+        }
+        catch (NumberFormatException e) {
+            Random random = new Random();
+            id = books.get(random.nextInt(books.size())).getId();
+        }
+
+        Book book = BookOperations.getBookById(id);
+        model.addAttribute("book", book);
+
+        return "book";
     }
 
 }

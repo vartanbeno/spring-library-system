@@ -36,7 +36,27 @@
         margin-bottom: 0;
     }
 
-    .book.info {
+    .description > .book.info {
         text-decoration: underline;
+    }
+
+    .book.description {
+        min-height: 250px;
+    }
+
+    .grid.book.info > .column {
+        padding-bottom: 0;
+    }
+
+    .justify {
+        text-align: justify;
+    }
+
+    .small.text {
+        font-size: 1rem;
+    }
+
+    .grey.text {
+        color: rgba(0, 0, 0, 0.4)
     }
 </style>
