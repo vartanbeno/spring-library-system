@@ -14,10 +14,10 @@
         </h1>
 
         <% if ((boolean) request.getSession().getAttribute("loggedIn")) { %>
-        <button class="ui tiny inverted left floated button" onclick="window.location.href='/'">
+        <button class="ui tiny inverted left floated button" onclick="window.location.href='${pageContext.request.contextPath}/'">
             <i class="search icon"></i>Search
         </button>
-            <button class="ui tiny inverted right floated button" onclick="window.location.href='/logout'">
+            <button class="ui tiny inverted right floated button" onclick="window.location.href='${pageContext.request.contextPath}/logout'">
                 <i class="power off icon"></i>Logout
             </button>
         <% } %>

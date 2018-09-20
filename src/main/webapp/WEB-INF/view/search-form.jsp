@@ -26,7 +26,7 @@
             </core:if>
 
             <h3>Conduct a search</h3>
-            <form class="ui form" action="search" method="get">
+            <form class="ui form" action="${pageContext.request.contextPath}/search" method="get">
 
                 <div class="field">
                     <label for="q">Search for...</label>

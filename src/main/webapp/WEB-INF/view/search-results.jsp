@@ -21,10 +21,10 @@
 
             <div class="item">
                 <div class="ui tiny image">
-                    <img src="${book.imageUrl}" alt="cover of ${book.title}" />
+                    <img class="book cover" src="${book.imageUrl}" alt="cover of ${book.title}" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'" />
                 </div>
                 <div class="content">
-                    <a class="header" href="/book?id=${book.id}">${book.title}</a>
+                    <a class="header" href="${pageContext.request.contextPath}/book?id=${book.id}">${book.title}</a>
                     <div class="meta">
                         ${book.author}
                     </div>
@@ -43,7 +43,7 @@
                         </p>
                     </div>
                     <div class="extra">
-                        <button class="ui right floated right labeled icon blue button" onclick="window.location.href='/book?id=${book.id}'">
+                        <button class="ui right floated right labeled icon blue button" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'">
                             <i class="info icon"></i>
                             Information
                         </button>

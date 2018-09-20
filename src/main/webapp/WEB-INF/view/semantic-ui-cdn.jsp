@@ -39,6 +39,10 @@
     .description > .book.info {
         text-decoration: underline;
     }
+    
+    .book.cover {
+        cursor: pointer;
+    }
 
     .book.description {
         min-height: 250px;
