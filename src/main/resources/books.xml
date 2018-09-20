@@ -206,4 +206,36 @@ Book genres are taken from https://www.wikipedia.org/
         <available>true</available>
     </book>
 
+    <book>
+        <id>14</id>
+        <title>For Whom the Bell Tolls</title>
+        <author>Ernest Hemingway</author>
+        <publisher>Scribner</publisher>
+        <publishingYear>1995</publishingYear>
+        <genre>war</genre>
+        <numberOfPages>471</numberOfPages>
+        <description>In 1937 Ernest Hemingway traveled to Spain to cover the civil war there for the North American Newspaper Alliance. Three years later he completed the greatest novel to emerge from "the good fight", For Whom the Bell Tolls.
+
+            The story of Robert Jordan, a young American in the International Brigades attached to an antifascist guerilla unit in the mountains of Spain, it tells of loyalty and courage, love and defeat, and the tragic death of an ideal. In his portrayal of Jordan's love for the beautiful Maria and his superb account of El Sordo's last stand, in his brilliant travesty of La Pasionaria and his unwillingness to believe in blind faith, Hemingway surpasses his achievement in The Sun Also Rises and A Farewell to Arms to create a work at once rare and beautiful, strong and brutal, compassionate, moving and wise.
+
+            "If the function of a writer is to reveal reality," Maxwell Perkins wrote to Hemingway after reading the manuscript, "no one ever so completely performed it." Greater in power, broader in scope, and more intensely emotional than any of the author's previous works, it stands as one of the best war novels of all time.</description>
+        <url>https://www.goodreads.com/book/show/46170.For_Whom_the_Bell_Tolls</url>
+        <imageUrl>https://images.gr-assets.com/books/1492591524l/46170.jpg</imageUrl>
+        <available>false</available>
+    </book>
+
+    <book>
+        <id>15</id>
+        <title>The Old Man and the Sea</title>
+        <author>Ernest Hemingway</author>
+        <publisher>Scribner</publisher>
+        <publishingYear>1996</publishingYear>
+        <genre>literary fiction</genre>
+        <numberOfPages>132</numberOfPages>
+        <description>It is the story of an old Cuban fisherman and his supreme ordeal: a relentless, agonizing battle with a giant marlin far out in the Gulf Stream. Using the simple, powerful language of a fable, Hemingway takes the timeless themes of courage in the face of defeat and personal triumph won from loss and transforms them into a magnificent twentieth-century classic.</description>
+        <url>https://www.goodreads.com/book/show/2165.The_Old_Man_and_the_Sea</url>
+        <imageUrl>https://images.gr-assets.com/books/1329189714l/2165.jpg</imageUrl>
+        <available>true</available>
+    </book>
+
 </books>

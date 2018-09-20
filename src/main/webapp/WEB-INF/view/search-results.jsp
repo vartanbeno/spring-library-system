@@ -15,7 +15,10 @@
 <body>
 <jsp:include page="header.jsp" />
 <div class="ui container body">
-    <h2 class="ui dividing header">Searching for "${query}" by ${searchBy}.</h2>
+    <h2 class="ui dividing header">
+        Searching for "${query}" by ${searchBy}.
+        <div class="sub header">${books.size()} results</div>
+    </h2>
     <div class="ui divided items">
 
         <core:forEach var="book" items="${books}">
