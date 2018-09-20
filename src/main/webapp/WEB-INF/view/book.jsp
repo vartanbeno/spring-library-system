@@ -14,7 +14,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-<div class="ui main text container">
+<div class="ui main text container body">
 
     <h2 class="ui dividing header">
         ${book.title} <span class="grey text">&mdash;</span> ${book.author}
@@ -31,7 +31,7 @@
     </h2>
     <div class="book description">
         <img class="ui small left floated image" src="${book.imageUrl}" alt="cover of ${book.title}" />
-        <p class="justify">${book.description}</p>
+        <p class="justify preline">${book.description}</p>
     </div>
 
     <div class="ui grid small text book info">

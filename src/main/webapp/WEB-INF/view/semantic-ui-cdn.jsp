@@ -60,6 +60,10 @@
         text-align: justify;
     }
 
+    .preline {
+        white-space: pre-line;
+    }
+
     .small.text {
         font-size: 1rem;
     }
