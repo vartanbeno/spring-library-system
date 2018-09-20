@@ -8,6 +8,14 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
 
 <style>
+    .ui.container {
+        margin-bottom: 3rem;
+    }
+
+    .search.results {
+        width: 75%;
+    }
+
     .main {
         display: flex;
         justify-content: center;
@@ -26,5 +34,9 @@
     #header h1 {
         color: white;
         margin-bottom: 0;
+    }
+
+    .book.info {
+        text-decoration: underline;
     }
 </style>
