@@ -24,7 +24,7 @@
                     <img src="${book.imageUrl}" alt="cover of ${book.title}" />
                 </div>
                 <div class="content">
-                    <a class="header">${book.title}</a>
+                    <a class="header" href="/book?id=${book.id}">${book.title}</a>
                     <div class="meta">
                         ${book.author}
                     </div>
@@ -33,10 +33,10 @@
                         <p><span class="book info">Publishing year:</span> ${book.publishingYear}</p>
                     </div>
                     <div class="extra">
-                        <div class="ui right floated right labeled icon blue button">
+                        <button class="ui right floated right labeled icon blue button" onclick="window.location.href='/book?id=${book.id}'">
                             <i class="info icon"></i>
                             Information
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

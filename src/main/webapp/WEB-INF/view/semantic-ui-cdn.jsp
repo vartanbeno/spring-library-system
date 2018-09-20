@@ -44,6 +44,10 @@
         min-height: 250px;
     }
 
+    .grid.book.info {
+        margin-top: 2rem;
+    }
+
     .grid.book.info > .column {
         padding-bottom: 0;
     }
