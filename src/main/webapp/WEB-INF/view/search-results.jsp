@@ -15,6 +15,7 @@
 <body>
 <jsp:include page="header.jsp" />
 <div class="ui container body">
+    <h2 class="ui dividing header">Searching for "${query}" by ${searchBy}.</h2>
     <div class="ui divided items">
 
         <core:forEach var="book" items="${books}">

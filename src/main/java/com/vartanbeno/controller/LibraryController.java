@@ -75,7 +75,8 @@ public class LibraryController {
         }
 
         model.addAttribute("books", books);
-        model.addAttribute("searchingBy", searchBy.toLowerCase());
+        model.addAttribute("query", query);
+        model.addAttribute("searchBy", searchBy.toLowerCase());
 
         return "search-results";
     }

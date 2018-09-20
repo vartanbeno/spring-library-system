@@ -73,9 +73,5 @@ public class BookOperations {
         public List<Book> getBookList() {
             return books;
         }
-
-        public void setBookList(List<Book> books) {
-            this.books = books;
-        }
     }
 }
