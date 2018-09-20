@@ -52,10 +52,6 @@
         margin-top: 2rem;
     }
 
-    .grid.book.info > .column {
-        padding-bottom: 0;
-    }
-
     .justify {
         text-align: justify;
     }
