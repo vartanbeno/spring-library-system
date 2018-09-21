@@ -56,7 +56,7 @@
     }
 
     div.book.cover {
-        margin: 1rem 0;
+        margin: 1rem 1rem;
         padding: 1rem 0.5rem;
         width: 220px;
         text-align: center;
