@@ -34,6 +34,18 @@ public class LibraryController {
         }
     }
 
+    @GetMapping("/browse")
+    public String browseAllBooks(Model model, HttpServletRequest request) {
+        if (!LoginController.loggedIn(request)) {
+            return "redirect:/login?warning";
+        }
+
+        books = BookOperations.getBooks();
+        model.addAttribute("books", books);
+
+        return "browse";
+    }
+
     @GetMapping("/search")
     public String searchBooks(
             @RequestParam(value = "by", required = false) String searchBy,

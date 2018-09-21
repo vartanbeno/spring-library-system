@@ -50,7 +50,7 @@
 
             </form>
 
-            <button type="button" class="fluid ui black button">Browse All</button>
+            <button type="button" class="fluid ui black button" onclick="window.location.href='${pageContext.request.contextPath}/browse'">Browse All</button>
 
         </div>
     </div>
