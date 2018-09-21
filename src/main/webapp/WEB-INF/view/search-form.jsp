@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>Search</title>
-    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
 <jsp:include page="header.jsp" />
