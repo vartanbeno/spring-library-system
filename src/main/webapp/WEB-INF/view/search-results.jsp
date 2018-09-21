@@ -21,6 +21,14 @@
         </div>
     </h2>
 
+    <core:if test="${books.size() == 0}">
+        <div class="main">
+            <div class="ui red message">
+                <p>Your search didn't return anything. Try again!</p>
+            </div>
+        </div>
+    </core:if>
+
     <div class="ui divided items" id="list-view">
 
         <core:forEach var="book" items="${books}">
