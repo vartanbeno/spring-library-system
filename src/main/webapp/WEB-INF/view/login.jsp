@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>Sign In</title>
-    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
 <jsp:include page="header.jsp" />

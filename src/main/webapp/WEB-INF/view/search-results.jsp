@@ -10,16 +10,26 @@
 <html>
 <head>
     <title>Search Results</title>
-    <jsp:include page="semantic-ui-cdn.jsp" />
 </head>
 <body>
 <jsp:include page="header.jsp" />
 <div class="ui container body">
     <h2 class="ui dividing header">
         Searching for "${query}" by ${searchBy}.
-        <div class="sub header">${books.size()} results</div>
+        <div class="sub header">
+            ${books.size()} results
+        </div>
     </h2>
-    <div class="ui divided items">
+
+    <core:if test="${books.size() == 0}">
+        <div class="main">
+            <div class="ui red message">
+                <p>Your search didn't return anything. Try again!</p>
+            </div>
+        </div>
+    </core:if>
+
+    <div class="ui divided items" id="list-view">
 
         <core:forEach var="book" items="${books}">
 
@@ -66,6 +76,37 @@
         </core:forEach>
 
     </div>
+
+    <div id="grid-view" style="display: none;">
+        <core:forEach var="book" items="${books}">
+
+            <div class="book cover" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'">
+                <img src="${book.imageUrl}" alt="cover of ${book.title}" width="150px">
+                <div class="book title and author">
+                    <p class="ui header title">${book.title}</p>
+                    <p class="grey text">${book.author}</p>
+                </div>
+            </div>
+
+        </core:forEach>
+    </div>
+
 </div>
+
+<script>
+    $('#grid-button').click(function() {
+        $('#list-view').css('display', 'none');
+        $('#grid-view').css('display', '');
+        $('#list-button').css('display', '');
+        $('#grid-button').css('display', 'none');
+    })
+
+    $('#list-button').click(function() {
+        $('#list-view').css('display', '');
+        $('#grid-view').css('display', 'none');
+        $('#list-button').css('display', 'none');
+        $('#grid-button').css('display', '');
+    })
+</script>
 </body>
 </html>
