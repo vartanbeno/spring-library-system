@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 <style>
     .ui.container {

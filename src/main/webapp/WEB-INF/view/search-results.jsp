@@ -69,7 +69,7 @@
 
     </div>
 
-    <div id="grid-view">
+    <div id="grid-view" style="display: none;">
         <core:forEach var="book" items="${books}">
 
             <div class="book cover" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'">
@@ -84,5 +84,21 @@
     </div>
 
 </div>
+
+<script>
+    $('#grid-button').click(function() {
+        $('#list-view').css('display', 'none');
+        $('#grid-view').css('display', '');
+        $('#list-button').css('display', '');
+        $('#grid-button').css('display', 'none');
+    })
+
+    $('#list-button').click(function() {
+        $('#list-view').css('display', '');
+        $('#grid-view').css('display', 'none');
+        $('#list-button').css('display', 'none');
+        $('#grid-button').css('display', '');
+    })
+</script>
 </body>
 </html>

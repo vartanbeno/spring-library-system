@@ -20,7 +20,7 @@
             <i class="search icon"></i>Search
         </button>
         <core:if test="${pageContext.request.requestURI.endsWith('/search-results.jsp')}">
-            <button class="ui tiny inverted left floated button" id="list-button">
+            <button class="ui tiny inverted left floated button" id="list-button" style="display: none;">
                 <i class="list ul icon"></i>List
             </button>
             <button class="ui tiny inverted left floated button" id="grid-button">
