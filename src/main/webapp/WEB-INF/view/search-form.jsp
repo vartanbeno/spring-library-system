@@ -49,6 +49,9 @@
                 <button type="submit" class="fluid ui blue button">Search</button>
 
             </form>
+
+            <button type="button" class="fluid ui black button">Browse All</button>
+
         </div>
     </div>
 </div>
