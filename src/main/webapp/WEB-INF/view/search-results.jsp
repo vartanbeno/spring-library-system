@@ -66,6 +66,21 @@
         </core:forEach>
 
     </div>
+
+    <div class="book grid">
+        <core:forEach var="book" items="${books}">
+
+            <div class="book cover" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'">
+                <img src="${book.imageUrl}" alt="cover of ${book.title}" width="150px">
+                <div class="book title and author">
+                    <p class="ui header title">${book.title}</p>
+                    <p class="grey text">${book.author}</p>
+                </div>
+            </div>
+
+        </core:forEach>
+    </div>
+
 </div>
 </body>
 </html>

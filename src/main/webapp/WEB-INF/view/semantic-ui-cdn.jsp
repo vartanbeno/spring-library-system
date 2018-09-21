@@ -39,7 +39,7 @@
     .description > .book.info {
         text-decoration: underline;
     }
-    
+
     .book.cover {
         cursor: pointer;
     }
@@ -48,8 +48,29 @@
         min-height: 250px;
     }
 
-    .grid.book.info {
-        margin-top: 2rem;
+    .book.grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    div.book.cover {
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+        width: 220px;
+        text-align: center;
+        box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    .book.title.and.author {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .book.title.and.author > p.title {
+        color: #4183C4;
+        margin-bottom: 0;
+        margin-top: 1rem;
     }
 
     .justify {
