@@ -17,9 +17,12 @@
 <div class="ui container body">
     <h2 class="ui dividing header">
         Searching for "${query}" by ${searchBy}.
-        <div class="sub header">${books.size()} results</div>
+        <div class="sub header">
+            ${books.size()} results
+        </div>
     </h2>
-    <div class="ui divided items">
+
+    <div class="ui divided items" id="list-view">
 
         <core:forEach var="book" items="${books}">
 
@@ -67,7 +70,7 @@
 
     </div>
 
-    <div class="book grid">
+    <div id="grid-view">
         <core:forEach var="book" items="${books}">
 
             <div class="book cover" onclick="window.location.href='${pageContext.request.contextPath}/book?id=${book.id}'">

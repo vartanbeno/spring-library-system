@@ -48,7 +48,7 @@
         min-height: 250px;
     }
 
-    .book.grid {
+    #grid-view {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
