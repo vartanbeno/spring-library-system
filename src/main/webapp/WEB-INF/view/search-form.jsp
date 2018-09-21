@@ -25,7 +25,7 @@
             </core:if>
 
             <h3>Conduct a search</h3>
-            <form class="ui form" action="${pageContext.request.contextPath}/search" method="get">
+            <form class="ui form" action="${pageContext.request.contextPath}/search" method="get" autocomplete="off">
 
                 <div class="field">
                     <label for="q">Search for...</label>
@@ -38,7 +38,7 @@
                         <c:forEach items="${searchByOptions}" var="option">
                             <div class="field">
                                 <div class="ui radio checkbox">
-                                    <input type="radio" name="by" id="${option}" value="${option}" required />
+                                    <input type="radio" name="by" id="${option}" value="${option}" required ${option eq searchByOptions[0] ? 'checked' : ''} />
                                     <label style="cursor: pointer;" for="${option}">${option}</label>
                                 </div>
                             </div>

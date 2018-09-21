@@ -37,7 +37,7 @@
             </core:if>
 
             <h3>Sign In</h3>
-            <form:form cssClass="ui form" action="${pageContext.request.contextPath}/authenticate" modelAttribute="user" method="post">
+            <form:form cssClass="ui form" action="${pageContext.request.contextPath}/authenticate" modelAttribute="user" method="post" autocomplete="off">
 
                 <div class="field">
                     <label for="username">Username</label>
