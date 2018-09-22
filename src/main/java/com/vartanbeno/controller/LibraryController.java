@@ -93,11 +93,6 @@ public class LibraryController {
         return "search-results";
     }
 
-    /*
-    Made it so that if the id parameter isn't defined,
-    or is just not in the 'database', the user will be
-    show a random book from the collection.
-     */
     @GetMapping("/book")
     public String getBook(
             @RequestParam(value = "id", required = false) String bookId,
@@ -109,19 +104,35 @@ public class LibraryController {
         }
 
         int id;
-        List<Book> books = BookOperations.getBooks();
-
         try {
             id = Integer.parseInt(bookId);
         }
         catch (NumberFormatException e) {
-            Random random = new Random();
-            id = books.get(random.nextInt(books.size())).getId();
+            return "redirect:/?error";
         }
 
         Book book = BookOperations.getBookById(id);
+        if (book == null) {
+            return "redirect:/?error";
+        }
+
         model.addAttribute("book", book);
 
+        return "book";
+    }
+
+    @GetMapping("/random")
+    public String getRandomBook(Model model, HttpServletRequest request) {
+        if (!LoginController.loggedIn(request)) {
+            return "redirect:login?warning";
+        }
+
+        Random random = new Random();
+        List<Book> books = BookOperations.getBooks();
+        int id = books.get(random.nextInt(books.size())).getId();
+
+        Book book = BookOperations.getBookById(id);
+        model.addAttribute("book", book);
         return "book";
     }
 

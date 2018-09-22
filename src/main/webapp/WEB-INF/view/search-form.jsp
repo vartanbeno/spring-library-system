@@ -24,6 +24,12 @@
                 </div>
             </core:if>
 
+            <core:if test="${param.error != null}">
+                <div class="ui red message">
+                    <p>Not a valid book. Try again!</p>
+                </div>
+            </core:if>
+
             <h3>Conduct a search</h3>
             <form class="ui form" action="${pageContext.request.contextPath}/search" method="get" autocomplete="off">
 

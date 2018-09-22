@@ -19,6 +19,9 @@
         <button class="ui tiny inverted left floated button" onclick="window.location.href='${pageContext.request.contextPath}/'">
             <i class="search icon"></i>Search
         </button>
+        <button class="ui tiny inverted left floated button" onclick="window.location.href='${pageContext.request.contextPath}/random'">
+            <i class="random icon"></i>Random
+        </button>
         <core:if test="${pageContext.request.requestURI.endsWith('/search-results.jsp') || pageContext.request.requestURI.endsWith('/browse.jsp')}">
             <button class="ui tiny inverted left floated button" id="list-button" style="display: none;">
                 <i class="list ul icon"></i>List
